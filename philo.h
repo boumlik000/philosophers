@@ -6,7 +6,7 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 17:16:56 by mboumlik          #+#    #+#             */
-/*   Updated: 2024/07/28 11:10:50 by mboumlik         ###   ########.fr       */
+/*   Updated: 2024/07/28 11:50:34 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,15 @@ typedef struct s_data{
     unsigned long time_to_eat;
     unsigned long time_to_sleep;
     int meals;
+
+    t_philo *philo;
+        
 }t_data;
+typedef struct s_philo
+{
+    int id;
+    t_data *data;
+}t_philo;
 
 //utils
 int ft_atoi(char *str);

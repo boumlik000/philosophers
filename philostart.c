@@ -6,7 +6,7 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 11:01:08 by mboumlik          #+#    #+#             */
-/*   Updated: 2024/07/28 11:19:02 by mboumlik         ###   ########.fr       */
+/*   Updated: 2024/07/28 11:51:27 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,14 @@ int init_data(t_data *data,int ac,char **av)
         data->meals = ft_atoi(av[5]);
     
 }
-
+int malloc_data(t_data *data)
+{
+    data->philo = malloc(sizeof(t_philo) * data->nb_philo);
+    if (!data->philo)
+        return NULL;
+    
+    
+}
 int philosophers(int ac,char **av)
 {
     t_data *data;
