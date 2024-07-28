@@ -6,7 +6,7 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 17:16:56 by mboumlik          #+#    #+#             */
-/*   Updated: 2024/07/18 20:20:08 by mboumlik         ###   ########.fr       */
+/*   Updated: 2024/07/28 11:10:50 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,26 @@
 #include <stdlib.h>
 #include <pthread.h>
 
+typedef struct s_data{
+    int nb_philo;
+    int nb_all_philo;
+    unsigned long time_to_die;
+    unsigned long time_to_eat;
+    unsigned long time_to_sleep;
+    int meals;
+}t_data;
+
 //utils
 int ft_atoi(char *str);
-int isnumber(char *str);
+int check_data(int ac,char **av);
 
 //parsing
-int parsing(int ac,char **av);
+int check_data_atoi(char **av);
+int check_data_char(char **av);
+int check_data(int ac,char **av);
+
+//mandatory
+int init_data(t_data *data,int ac,char **av);
+int philosophers(int ac,char **av);
+
 #endif 

@@ -6,26 +6,13 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 18:00:48 by mboumlik          #+#    #+#             */
-/*   Updated: 2024/07/18 20:29:06 by mboumlik         ###   ########.fr       */
+/*   Updated: 2024/07/28 10:22:41 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
 
-int isnumber(char *str) {
-    int i = 0;
-    if (str[i] == '-' || str[i] == '+') {
-        str++; // skip the sign
-    }
-    while (str[i]) {
-        if (str[i] < '0' || str[i] > '9') {
-            return 0; // Not a digit
-        }
-        i++;
-    }
-    return 1;
-}
 
 int ft_atoi(char *str)
 {
