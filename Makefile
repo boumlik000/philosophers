@@ -1,31 +1,30 @@
 NAME = philo
-
-CFLAGS = -Wall -Werror -Wextra 
 CC = cc
+CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address
 
-SRC = philo.c utils.c parsing.c
+SRCS = parsing.c  philo.c philostart.c utils.c
 
-OBJC =  $(SRC:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(OBJC) : $(SRC)
-
-$(NAME): $(OBJC) 
-	@-$(CC) $(OBJC) -o $(NAME)
+$(NAME): $(OBJS)
+	@-$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.c
 	@-$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@-rm -rf $(OBJC) 
+	@-rm -f $(OBJS)
+	@-echo "clean done"
 
 fclean: clean
-	@-rm -rf $(NAME) 
+	@-rm -f $(NAME)
+	@-echo "fclean done"
 
 re: fclean 
-	@-$(MAKE) all
-	@-$(MAKE) clean
-	
+	@-$(MAKE) all 
+	@-$(MAKE) clean 
 
-.SECONDARY:  $(OBJC) 
+.PHONY: all clean fclean re
+.SECONDARY: $(OBJC)

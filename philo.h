@@ -6,7 +6,7 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 17:16:56 by mboumlik          #+#    #+#             */
-/*   Updated: 2024/07/28 17:06:46 by mboumlik         ###   ########.fr       */
+/*   Updated: 2024/07/31 18:36:50 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,30 @@
 #include <pthread.h>
 
 typedef struct s_philo
-{
+{   
     int id;
+    int die;
+    int meal_eated;
     struct s_data *data;
-}t_philo;
+    pthread_mutex_t *fork_left;
+    pthread_mutex_t *fork_right;
+} t_philo;
 
-typedef struct s_data{
+typedef struct s_data
+{
     int nb_philo;
-    int nb_all_philo;
+    // int nb_all_philo;
     unsigned long time_to_die;
     unsigned long time_to_eat;
     unsigned long time_to_sleep;
     int meals;
-    
+    int philo_die;
+    pthread_mutex_t print_mutex;
+    pthread_mutex_t general_mutex;
+    // pthread_mutex_t print_mutex;
 
     pthread_t *philotread;
-    
     pthread_mutex_t *forks;
-    
     t_philo *philo;
 }t_data;
 
@@ -51,6 +57,12 @@ int check_data(int ac,char **av);
 
 //mandatory
 int init_data(t_data *data,int ac,char **av);
+int philosophers(int ac,char **av);
+
+int malloc_data(t_data *data);
+void init_forks(t_data *data);
+int init_philos(t_data *data);
+void *philosopher_behavior(void *arg);
 int philosophers(int ac,char **av);
 
 #endif 
