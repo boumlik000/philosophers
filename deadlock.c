@@ -34,15 +34,16 @@ void *action(void *data)
 
 int main()
 {
-    t_cowboy ugly;
-    t_cowboy bad;
-    ugly.name = "ugly";
-    bad.name = "bad";
-    pthread_create(&ugly.thread,NULL,action,&ugly);
-    pthread_create(&bad.thread,NULL,action,&bad);
+    // t_cowboy ugly;
+    // t_cowboy bad;
+    // ugly.name = "ugly";
+    // bad.name = "bad";
+    // pthread_create(&ugly.thread,NULL,action,&ugly);
+    // pthread_create(&bad.thread,NULL,action,&bad);
 
 
-    pthread_join(ugly.thread,NULL);
-    pthread_join(bad.thread,NULL);
+    // pthread_join(ugly.thread,NULL);
+    // pthread_join(bad.thread,NULL);
+    printf("%d",gettimeofday());
     return 0;
 }

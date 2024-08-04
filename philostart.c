@@ -6,7 +6,7 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 11:01:08 by mboumlik          #+#    #+#             */
-/*   Updated: 2024/07/31 18:58:37 by mboumlik         ###   ########.fr       */
+/*   Updated: 2024/08/02 12:46:18 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ int init_philos(t_data *data)
 void *philosopher_behavior(void *arg)
 {
     t_philo *philo = (t_philo *)arg;
+    // philo->data->last_meal_time = (unsigned long)get_time();
+    // philo->data->meals_count = 0;
     while (1)
     {
         printf(" philo [%d] is thinking.\n",philo->id);
@@ -81,13 +83,26 @@ void *philosopher_behavior(void *arg)
         pthread_mutex_lock(philo->fork_right); // Pick up right fork
         printf("Philosopher [%d] khda forchita.\n", philo->id);
         printf("Philosopher [%d] is eating.\n", philo->id);
-        usleep(200000);  // Eat for a random amount of time
+        
+        usleep(philo->data->time_to_eat);  // Eat for a random amount of time
+        
         pthread_mutex_unlock(philo->fork_right); // Put down right fork
         printf("Philosopher [%d] 7ett forchita.\n", philo->id);
         pthread_mutex_unlock(philo->fork_left);  // Put down left fork
         printf("Philosopher [%d] 7ett forchita.\n", philo->id);
-        // if (philo->die)
+        
+        // if (get_time() - philo->data->last_meal_time > philo->data->time_to_die) {
+        //     printf("Philosopher [%d]has died.\n", philo->id);
         //     break;
+        // }
+
+        // // Check if philosopher has eaten enough meals
+        // if (philo->data->last_meal_time >= philo->data->meals) {
+        //     printf("Philosopher [%d] has eaten enough meals.\n", philo->id);
+        //     break;
+        // }
+        // philo->data->last_meal_time = get_time();
+        // philo->data->meals_count++;
     }
     return NULL;
 }
@@ -98,7 +113,6 @@ int philosophers(int ac,char **av)
         return 2;
     if (init_philos(&data))
         return 3;
-    // pthread_t *threads = malloc(data->nb_philo * sizeof(pthread_t));
     int i = 0;
     while (i < data.nb_philo) {
         pthread_create(&data.philotread[i], NULL, philosopher_behavior, &data.philo[i]);

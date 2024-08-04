@@ -6,7 +6,7 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 17:16:56 by mboumlik          #+#    #+#             */
-/*   Updated: 2024/07/31 18:36:50 by mboumlik         ###   ########.fr       */
+/*   Updated: 2024/08/01 21:22:59 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <pthread.h>
+#include <time.h>
 
 typedef struct s_philo
 {   
@@ -35,8 +36,10 @@ typedef struct s_data
     unsigned long time_to_die;
     unsigned long time_to_eat;
     unsigned long time_to_sleep;
-    int meals;
+    unsigned long meals;
+    int meals_count;
     int philo_die;
+    unsigned long last_meal_time;
     pthread_mutex_t print_mutex;
     pthread_mutex_t general_mutex;
     // pthread_mutex_t print_mutex;
