@@ -29,6 +29,8 @@ int init_data(t_data *data,int ac,char **av)
         data->meals = atoi(av[5]);
     pthread_mutex_init(&data->general_mutex, NULL);
     pthread_mutex_init(&data->print_mutex, NULL);
+    pthread_mutex_init(&data->mutex_ready, NULL);
+    data->ready = 0;
     return malloc_data(data);
 }
 int malloc_data(t_data *data)
@@ -80,7 +82,15 @@ int init_philo(t_data *data)
 
 vodi dead_loop(t_data *data)
 {
-    while(!data->ready);
+    int ready = 0;
+    while (!ready)
+    {
+        pthread_mutex_lock(&data->mutex_ready);
+        ready = data->ready;
+        pthread_mutex_unlock(&data->mutex_ready);
+        if (!ready)
+            usleep(1000);  // Short sleep to avoid busy-waiting
+    }
 }
 
 void *monitor(void *arg)
@@ -151,6 +161,7 @@ void destroy_mutex_data(t_data *data)
 {
     pthread_mutex_destroy(&data->general_mutex);
     pthread_mutex_destroy(&data->print_mutex);
+    pthread_mutex_destroy(&data->mutex_ready);
     int  i = 0;
     while (i < data->number_philo)
     {
@@ -192,7 +203,6 @@ void *philo_behavior(void *arg)
                 pthread_mutex_unlock(&philo->data->general_mutex);
                 pthread_mutex_unlock(philo->right_fork);
                 pthread_mutex_unlock(philo->left_fork);
-                // destroy_mutex_data(philo->data);
                 return 0;
             }
             pthread_mutex_unlock(&philo->data->general_mutex);
@@ -237,8 +247,9 @@ void philo(int ac,char **av)
             i++;
         }
         pthread_create(&monitor_,NULL,monitor, &data);
+        pthread_mutex_lock(&data.mutex_ready);
         data.ready = 1;
-        // monitor((void *)&data);
+        pthread_mutex_unlock(&data.mutex_ready);
         i = 0;
         while (i < data.number_philo)
         {

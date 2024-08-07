@@ -30,6 +30,7 @@ typedef struct s_data
     unsigned int time_to_sleep;
     pthread_mutex_t general_mutex;
     pthread_mutex_t print_mutex;
+    pthread_mutex_t mutex_ready;
 
     int flag_eat;
     int meals;
