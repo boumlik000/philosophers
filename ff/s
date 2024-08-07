@@ -1,0 +1,226 @@
+2 philo 2 pick up a fork
+3 philo 3 pick up a fork
+3 philo 5 pick up a fork
+3 philo 2 pick up a second fork
+3 philo 2 is eating
+3 philo 5 pick up a second fork
+3 philo 5 is eating
+203 philo 2 take off second fork
+203 philo 2 take off fork
+203 philo 2 is sleeping
+203 philo 1 pick up a fork
+203 philo 1 pick up a second fork
+203 philo 1 is eating
+203 philo 3 pick up a second fork
+203 philo 5 take off second fork
+203 philo 5 take off fork
+203 philo 5 is sleeping
+203 philo 3 is eating
+403 philo 2 is thinking
+403 philo 2 pick up a fork
+403 philo 5 is thinking
+403 philo 1 take off second fork
+403 philo 1 take off fork
+403 philo 3 take off second fork
+403 philo 3 take off fork
+403 philo 3 is sleeping
+403 philo 4 pick up a fork
+403 philo 1 is sleeping
+403 philo 4 pick up a second fork
+403 philo 4 is eating
+403 philo 5 pick up a fork
+403 philo 2 pick up a second fork
+403 philo 2 is eating
+603 philo 3 is thinking
+603 philo 3 pick up a fork
+603 philo 2 take off second fork
+603 philo 2 take off fork
+603 philo 4 take off second fork
+603 philo 4 take off fork
+603 philo 4 is sleeping
+603 philo 3 pick up a second fork
+603 philo 3 is eating
+603 philo 5 pick up a second fork
+603 philo 5 is eating
+603 philo 2 is sleeping
+603 philo 1 is thinking
+603 philo 1 pick up a fork
+803 philo 2 is thinking
+803 philo 4 is thinking
+803 philo 4 pick up a fork
+803 philo 5 take off second fork
+803 philo 5 take off fork
+803 philo 5 is sleeping
+803 philo 3 take off second fork
+803 philo 4 pick up a second fork
+803 philo 4 is eating
+803 philo 1 pick up a second fork
+803 philo 1 is eating
+803 philo 3 take off fork
+803 philo 3 is sleeping
+1003 philo 5 is thinking
+1003 philo 3 is thinking
+1003 philo 3 pick up a fork
+1003 philo 3 pick up a second fork
+1003 philo 3 is eating
+1003 philo 1 take off second fork
+1003 philo 1 take off fork
+1003 philo 1 is sleeping
+1003 philo 2 pick up a fork
+1003 philo 4 take off second fork
+1003 philo 4 take off fork
+1003 philo 4 is sleeping
+1003 philo 5 pick up a fork
+1003 philo 5 pick up a second fork
+1003 philo 5 is eating
+1203 philo 1 is thinking
+1203 philo 5 take off second fork
+1203 philo 5 take off fork
+1203 philo 5 is sleeping
+1203 philo 4 is thinking
+1203 philo 4 pick up a fork
+1203 philo 4 pick up a second fork
+1203 philo 3 take off second fork
+1203 philo 3 take off fork
+1203 philo 4 is eating
+1203 philo 3 is sleeping
+1203 philo 2 pick up a second fork
+1203 philo 2 is eating
+1403 philo 1 pick up a fork
+1403 philo 5 is thinking
+1403 philo 3 is thinking
+1403 philo 1 pick up a second fork
+1403 philo 1 is eating
+1403 philo 2 take off second fork
+1403 philo 2 take off fork
+1403 philo 3 pick up a fork
+1403 philo 3 pick up a second fork
+1403 philo 3 is eating
+1403 philo 2 is sleeping
+1403 philo 4 take off second fork
+1403 philo 4 take off fork
+1403 philo 4 is sleeping
+1603 philo 2 is thinking
+1603 philo 2 pick up a fork
+1603 philo 4 is thinking
+1603 philo 4 pick up a fork
+1603 philo 3 take off second fork
+1603 philo 3 take off fork
+1603 philo 3 is sleeping
+1603 philo 4 pick up a second fork
+1603 philo 4 is eating
+1603 philo 1 take off second fork
+1603 philo 1 take off fork
+1603 philo 1 is sleeping
+1603 philo 2 pick up a second fork
+1603 philo 2 is eating
+1603 philo 5 pick up a fork
+1803 philo 1 is thinking
+1803 philo 2 take off second fork
+1803 philo 2 take off fork
+1803 philo 2 is sleeping
+1803 philo 4 take off second fork
+1803 philo 4 take off fork
+1803 philo 1 pick up a fork
+1803 philo 4 is sleeping
+1803 philo 3 is thinking
+1803 philo 3 pick up a fork
+1803 philo 3 pick up a second fork
+1803 philo 3 is eating
+1803 philo 5 pick up a second fork
+1803 philo 5 is eating
+2003 philo 2 is thinking
+2003 philo 3 take off second fork
+2003 philo 5 take off second fork
+2003 philo 5 take off fork
+2003 philo 4 is thinking
+2003 philo 1 pick up a second fork
+2003 philo 1 is eating
+2003 philo 5 is sleeping
+2003 philo 4 pick up a fork
+2003 philo 3 take off fork
+2003 philo 4 pick up a second fork
+2003 philo 4 is eating
+2003 philo 3 is sleeping
+2203 philo 3 is thinking
+2203 philo 3 pick up a fork
+2203 philo 3 pick up a second fork
+2203 philo 3 is eating
+2203 philo 2 pick up a fork
+2203 philo 4 take off second fork
+2203 philo 1 take off second fork
+2203 philo 1 take off fork
+2203 philo 4 take off fork
+2203 philo 1 is sleeping
+2203 philo 4 is sleeping
+2203 philo 5 is thinking
+2203 philo 5 pick up a fork
+2203 philo 5 pick up a second fork
+2203 philo 5 is eating
+2403 philo 1 is thinking
+2403 philo 5 take off second fork
+2403 philo 5 take off fork
+2403 philo 5 is sleeping
+2403 philo 3 take off second fork
+2403 philo 4 is thinking
+2403 philo 4 pick up a fork
+2403 philo 4 pick up a second fork
+2403 philo 4 is eating
+2403 philo 2 pick up a second fork
+2403 philo 2 is eating
+2403 philo 3 take off fork
+2403 philo 3 is sleeping
+2603 philo 5 is thinking
+2603 philo 5 pick up a fork
+2603 philo 4 take off second fork
+2603 philo 3 is thinking
+2603 philo 1 pick up a fork
+2603 philo 5 pick up a second fork
+2603 philo 5 is eating
+2603 philo 3 pick up a fork
+2603 philo 4 take off fork
+2603 philo 2 take off second fork
+2603 philo 4 is sleeping
+2603 philo 2 take off fork
+2603 philo 3 pick up a second fork
+2603 philo 3 is eating
+2603 philo 2 is sleeping
+2803 philo 4 is thinking
+2803 philo 4 pick up a fork
+2803 philo 2 is thinking
+2803 philo 1 pick up a second fork
+2803 philo 1 is eating
+2803 philo 5 take off second fork
+2803 philo 4 pick up a second fork
+2803 philo 4 is eating
+2803 philo 5 take off fork
+2803 philo 5 is sleeping
+3003 philo 2 pick up a fork
+3003 philo 2 pick up a second fork
+3003 philo 2 is eating
+3003 philo 5 is thinking
+3003 philo 1 take off second fork
+3003 philo 1 take off fork
+3003 philo 1 is sleeping
+3003 philo 5 pick up a fork
+3003 philo 5 pick up a second fork
+3003 philo 5 is eating
+3203 philo 1 is thinking
+3203 philo 2 take off second fork
+3203 philo 1 pick up a fork
+3203 philo 2 take off fork
+3203 philo 2 is sleeping
+3203 philo 1 pick up a second fork
+3203 philo 1 is eating
+3403 philo 2 is thinking
+3403 philo 1 take off second fork
+3403 philo 2 pick up a fork
+3403 philo 1 take off fork
+3403 philo 2 pick up a second fork
+3403 philo 1 is sleeping
+3403 philo 2 is eating
+3603 philo 1 is thinking
+3603 philo 1 pick up a fork
+3603 philo 1 pick up a second fork
+3603 philo 1 is eating
+3604 philo 1 is dead++++++++++++++++++++++
