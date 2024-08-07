@@ -5,7 +5,9 @@ void print_message(char *message, t_philo *philo);
 void ft_sleep(long time)
 {
     long start = get_time();
-    while(get_time() - start < time);
+    while(get_time() - start < time){
+        usleep(500);
+    }
 }
 
 int	get_time()
@@ -120,43 +122,34 @@ void *monitor(void *arg)
 
 void print_message(char *message, t_philo *philo)
 {
-    pthread_mutex_lock(&philo->data->print_mutex);
-    pthread_mutex_lock(&philo->data->general_mutex);
+    // pthread_mutex_lock(&philo->data->print_mutex);
+    // pthread_mutex_lock(&philo->data->general_mutex);
     if (philo->data->all_full)
     {
-        pthread_mutex_unlock(&philo->data->general_mutex);
-        pthread_mutex_unlock(&philo->data->print_mutex);
+        // pthread_mutex_unlock(&philo->data->print_mutex);
+        // pthread_mutex_unlock(&philo->data->general_mutex);
         return ;
     }
+    // pthread_mutex_unlock(&philo->data->print_mutex);
+    // pthread_mutex_unlock(&philo->data->general_mutex);
+
+    // pthread_mutex_lock(&philo->data->print_mutex);
+    // pthread_mutex_lock(&philo->data->general_mutex);
     if (philo->data->is_dead)
     {
-        pthread_mutex_unlock(&philo->data->general_mutex);
-        pthread_mutex_unlock(&philo->data->print_mutex);
+        // pthread_mutex_unlock(&philo->data->print_mutex);
+        // pthread_mutex_unlock(&philo->data->general_mutex);
         return ;
     }
     
-    pthread_mutex_unlock(&philo->data->print_mutex);
-    pthread_mutex_unlock(&philo->data->general_mutex);
+    // pthread_mutex_unlock(&philo->data->print_mutex);
+    // pthread_mutex_unlock(&philo->data->general_mutex);
     
     pthread_mutex_lock(&philo->data->print_mutex);
     printf("%ld philo %d %s", get_time() - philo->data->start, philo->id, message);
     pthread_mutex_unlock(&philo->data->print_mutex);
 }
-void printn(char *message, t_philo *philo)
-{
-    pthread_mutex_lock(&philo->data->print_mutex);
-    pthread_mutex_lock(&philo->data->general_mutex);
-    if (philo->data->all_full)
-    {
-        pthread_mutex_unlock(&philo->data->general_mutex);
-        printf("%s\n",message);
-        pthread_mutex_unlock(&philo->data->print_mutex);
-        return ;
-    }
-    pthread_mutex_unlock(&philo->data->general_mutex);
-    pthread_mutex_unlock(&philo->data->print_mutex);
-    return ;
-}
+
 void destroy_mutex_data(t_data *data)
 {
     pthread_mutex_destroy(&data->general_mutex);
@@ -177,6 +170,13 @@ void *philo_behavior(void *arg)
     dead_loop(philo->data);
     while (1)
     {
+        pthread_mutex_lock(&philo->data->general_mutex);
+        if (philo->data->is_dead)
+        {
+            pthread_mutex_unlock(&philo->data->general_mutex);
+            return(NULL);
+        }
+        pthread_mutex_unlock(&philo->data->general_mutex);
         pthread_mutex_lock(philo->left_fork);
         print_message("pick up a fork\n", philo);
         pthread_mutex_lock(philo->right_fork);
@@ -221,6 +221,7 @@ void *philo_behavior(void *arg)
         ft_sleep(philo->data->time_to_sleep);
 
         print_message("is thinking\n",philo);
+        ft_sleep(1);
     }
     return NULL;
 }
