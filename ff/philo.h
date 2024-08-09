@@ -27,7 +27,7 @@ typedef struct s_data
     unsigned int time_to_eat;
     unsigned int time_to_die;
     unsigned int time_to_sleep;
-    pthread_mutex_t general_mutex;
+
     pthread_mutex_t print_mutex;
     pthread_mutex_t mutex_ready;
     pthread_mutex_t is_dead_f;
@@ -69,5 +69,8 @@ int	chb3o(t_philo *philo);
 int	philo_sleeping(t_philo *philo);
 void	*philo_behavior(void *arg);
 void	*monitor(void *arg);
+void single_philo_case(int ac, char **av);
+void *single_philo(void *arg);
+
 
 #endif

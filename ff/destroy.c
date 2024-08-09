@@ -6,7 +6,7 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 19:12:06 by mboumlik          #+#    #+#             */
-/*   Updated: 2024/08/09 19:12:19 by mboumlik         ###   ########.fr       */
+/*   Updated: 2024/08/09 21:53:38 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	destroy_mutex_data(t_data *data)
 {
 	int	i;
 
-	pthread_mutex_destroy(&data->general_mutex);
+	// pthread_mutex_destroy(&data->general_mutex);
 	pthread_mutex_destroy(&data->print_mutex);
 	pthread_mutex_destroy(&data->mutex_ready);
 	pthread_mutex_destroy(&data->is_dead_f);

@@ -6,7 +6,7 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 19:19:07 by mboumlik          #+#    #+#             */
-/*   Updated: 2024/08/09 19:38:51 by mboumlik         ###   ########.fr       */
+/*   Updated: 2024/08/09 22:38:35 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -282,6 +282,10 @@
 // 	return (NULL);
 // }
 
+// 
+// 
+// 
+// 
 void	create_join(t_data *data)
 {
 	int	i;
@@ -350,11 +354,17 @@ int parsing(int ac,char *av[])
 
 int	main(int ac, char *av[])
 {
+	// t_data data;
     if (parsing(ac,av) != 0)
     {
         printf("error : parsing\n");
         return 2;
     }
+	if (ft_atoi(av[1]) == 1)
+	{
+		single_philo_case(ac, av);
+        return 0;
+	}
 	philo(ac, av);
 	return (0);
 }

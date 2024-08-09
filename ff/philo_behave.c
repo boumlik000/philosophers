@@ -6,7 +6,7 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 19:14:51 by mboumlik          #+#    #+#             */
-/*   Updated: 2024/08/09 19:55:38 by mboumlik         ###   ########.fr       */
+/*   Updated: 2024/08/09 21:52:41 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ int	chb3o(t_philo *philo)
 int	philo_sleeping(t_philo *philo)
 {
 	ft_sleep(philo->data, philo->data->time_to_eat);
-	pthread_mutex_lock(&philo->data->general_mutex);
+	pthread_mutex_lock(&philo->data->last_meal_f);
 	philo->last_meal_time = get_time();
-	pthread_mutex_unlock(&philo->data->general_mutex);
+	pthread_mutex_unlock(&philo->data->last_meal_f);
 	philo->meals_eaten += 1;
 		if (!chb3o(philo))
 			return (0);
