@@ -7,9 +7,6 @@
 #include<pthread.h>
 #include<stdbool.h>
 #include "colors.h"
-// #include <string.h>
-
-#define vodi void
 
 typedef struct s_philo
 {
@@ -19,6 +16,8 @@ typedef struct s_philo
     struct s_data *data;
     pthread_mutex_t *left_fork;
     pthread_mutex_t *right_fork;
+    pthread_t monitor_;
+
     int last_meal_time;
 
 }t_philo;
@@ -31,6 +30,10 @@ typedef struct s_data
     pthread_mutex_t general_mutex;
     pthread_mutex_t print_mutex;
     pthread_mutex_t mutex_ready;
+    pthread_mutex_t is_dead_f;
+    pthread_mutex_t all_full_f;
+    pthread_mutex_t last_meal_f;
+    pthread_mutex_t flag_eat_flag;
 
     int flag_eat;
     int meals;
@@ -40,10 +43,31 @@ typedef struct s_data
     int all_full;
     int is_dead;
     long start;
+    
     t_philo *philo_struct;//allocation
     pthread_t *philo_thread;
     pthread_mutex_t *forks;//allocation
-    // int time_since_last_meal;
 }t_data;
+
+
+//utils 
+int check_data_atoi(char **av);
+int check_data_char(char **av);
+int ft_atoi(char *str);
+
+int	init_philo(t_data *data);
+void	init_forks(t_data *data);
+int	init_data(t_data *data, int ac, char **av);
+int	malloc_data(t_data *data);
+void	ft_sleep(t_data *data, long time);
+int	get_time(void);
+void	dead_loop(t_data *data);
+void	print_message(char *message, t_philo *philo);
+void	destroy_mutex_data(t_data *data);
+void	philo_eating(t_philo *philo);
+int	chb3o(t_philo *philo);
+int	philo_sleeping(t_philo *philo);
+void	*philo_behavior(void *arg);
+void	*monitor(void *arg);
 
 #endif
