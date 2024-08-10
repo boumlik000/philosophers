@@ -6,7 +6,7 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 19:14:51 by mboumlik          #+#    #+#             */
-/*   Updated: 2024/08/09 21:52:41 by mboumlik         ###   ########.fr       */
+/*   Updated: 2024/08/10 09:50:03 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@
 void	philo_eating(t_philo *philo)
 {
 	pthread_mutex_lock(philo->left_fork);
-	print_message(BHCYN"pick up a fork\n"CRESET, philo);
+	print_message(BHCYN"has taken a fork\n"CRESET, philo);
 	pthread_mutex_lock(philo->right_fork);
-	print_message(BHCYN"pick up a fork\n"CRESET, philo);
+	print_message(BHCYN"has taken a fork\n"CRESET, philo);
 	print_message(BHYEL"is eating\n"CRESET, philo);
+	ft_sleep(philo->data, philo->data->time_to_eat);
 	pthread_mutex_lock(&philo->data->flag_eat_flag);
 	philo->data->flag_eat++;
 	pthread_mutex_unlock(&philo->data->flag_eat_flag);
@@ -50,7 +51,6 @@ int	chb3o(t_philo *philo)
 
 int	philo_sleeping(t_philo *philo)
 {
-	ft_sleep(philo->data, philo->data->time_to_eat);
 	pthread_mutex_lock(&philo->data->last_meal_f);
 	philo->last_meal_time = get_time();
 	pthread_mutex_unlock(&philo->data->last_meal_f);
@@ -59,9 +59,9 @@ int	philo_sleeping(t_philo *philo)
 			return (0);
 	pthread_mutex_unlock(philo->left_fork);
 	pthread_mutex_unlock(philo->right_fork);
-	print_message(BHGRN"is sleeping\n"CRESET, philo);
 	ft_sleep(philo->data, philo->data->time_to_sleep);
-	print_message("is thinking\n", philo);
+	print_message(BHGRN"is sleeping\n"CRESET, philo);
+	print_message(BHWHT"is thinking\n"CRESET, philo);
 	return (1);
 }
 

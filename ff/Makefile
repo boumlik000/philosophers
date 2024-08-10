@@ -1,6 +1,8 @@
+
+MAKEFLAGS = --no-print-directory
 NAME = philo
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=thread
+CFLAGS = -Wall -Wextra -Werror -g3 #-fsanitize=thread
 
 SRCS = philo.c data_init.c time.c print.c \
 		destroy.c philo_behave.c monitor.c utils.c single_case.c
@@ -27,5 +29,5 @@ re: fclean
 	@-$(MAKE) all 
 	@-$(MAKE) clean 
 
-# .PHONY: all clean fclean re
+.PHONY: all clean fclean re
 .SECONDARY: $(OBJC)

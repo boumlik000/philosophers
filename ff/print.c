@@ -6,7 +6,7 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 19:10:15 by mboumlik          #+#    #+#             */
-/*   Updated: 2024/08/09 20:16:07 by mboumlik         ###   ########.fr       */
+/*   Updated: 2024/08/10 09:20:36 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	print_message(char *message, t_philo *philo)
 	pthread_mutex_unlock(&philo->data->is_dead_f);
 	
 	pthread_mutex_lock(&philo->data->print_mutex);
-	printf("%ld philo %d %s", get_time() - philo->data->start, philo->id,
+	printf(BHWHT"%ld philo %d %s"CRESET, get_time() - philo->data->start, philo->id,
 		message);
 	pthread_mutex_unlock(&philo->data->print_mutex);
 }

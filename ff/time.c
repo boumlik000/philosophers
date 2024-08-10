@@ -6,7 +6,7 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 19:09:12 by mboumlik          #+#    #+#             */
-/*   Updated: 2024/08/09 22:24:11 by mboumlik         ###   ########.fr       */
+/*   Updated: 2024/08/10 09:53:35 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_sleep(t_data *data, long time)
             break;
         }
         pthread_mutex_unlock(&data->is_dead_f);
-		// usleep(500);
+		usleep(100);
 	}
 }
 

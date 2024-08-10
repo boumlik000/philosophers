@@ -6,7 +6,7 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 19:16:47 by mboumlik          #+#    #+#             */
-/*   Updated: 2024/08/09 19:17:01 by mboumlik         ###   ########.fr       */
+/*   Updated: 2024/08/10 09:52:02 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ void	*monitor(void *arg)
 	data = (t_data *)arg;
 	while (1)
 	{
-		for (int i = 0; i < data->number_philo; i++)
+		int i = 0;
+		while (i < data->number_philo)
 		{
 			pthread_mutex_lock(&data->last_meal_f);
 			time_since_last_meal = get_time()
@@ -28,12 +29,14 @@ void	*monitor(void *arg)
 			pthread_mutex_unlock(&data->last_meal_f);
 			if (time_since_last_meal > data->time_to_die)
 			{
-				print_message(BRED"is dead\n"CRESET, &data->philo_struct[i]);
+				print_message(BRED"died\n"CRESET, &data->philo_struct[i]);
 				pthread_mutex_lock(&data->is_dead_f);
 				data->is_dead = 1;
 				pthread_mutex_unlock(&data->is_dead_f);
 				return (NULL);
 			}
+			i++;
+			usleep(1000);
 		}
 	}
 }

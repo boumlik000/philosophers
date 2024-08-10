@@ -6,7 +6,7 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 19:06:41 by mboumlik          #+#    #+#             */
-/*   Updated: 2024/08/09 21:53:31 by mboumlik         ###   ########.fr       */
+/*   Updated: 2024/08/10 09:14:38 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ int	init_data(t_data *data, int ac, char **av)
 	data->meals = -1;
 	if (ac == 6)
 		data->meals = atoi(av[5]);
-	// pthread_mutex_init(&data->general_mutex, NULL);
 	pthread_mutex_init(&data->print_mutex, NULL);
 	pthread_mutex_init(&data->mutex_ready, NULL);
 	pthread_mutex_init(&data->is_dead_f, NULL);
