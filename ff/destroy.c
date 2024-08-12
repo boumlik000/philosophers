@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"philo.h"
+#include "philo.h"
 
 void	destroy_mutex_data(t_data *data)
 {
@@ -22,7 +22,6 @@ void	destroy_mutex_data(t_data *data)
 	pthread_mutex_destroy(&data->all_full_f);
 	pthread_mutex_destroy(&data->flag_eat_flag);
 	pthread_mutex_destroy(&data->last_meal_f);
-
 	i = 0;
 	while (i < data->number_philo)
 	{

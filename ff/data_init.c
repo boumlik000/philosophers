@@ -12,7 +12,6 @@
 
 #include "philo.h"
 
-
 int	malloc_data(t_data *data)
 {
 	data->philo_struct = malloc(sizeof(t_philo) * data->number_philo);

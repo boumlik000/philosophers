@@ -6,7 +6,7 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 19:09:12 by mboumlik          #+#    #+#             */
-/*   Updated: 2024/08/10 09:53:35 by mboumlik         ###   ########.fr       */
+/*   Updated: 2024/08/10 10:14:51 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ void	ft_sleep(t_data *data, long time)
 	start = get_time();
 	while (get_time() - start < time)
 	{
-        pthread_mutex_lock(&data->is_dead_f);
-        if (data->is_dead)
-        {
-            pthread_mutex_unlock(&data->is_dead_f);
-            break;
-        }
-        pthread_mutex_unlock(&data->is_dead_f);
+		pthread_mutex_lock(&data->is_dead_f);
+		if (data->is_dead)
+		{
+			pthread_mutex_unlock(&data->is_dead_f);
+			break ;
+		}
+		pthread_mutex_unlock(&data->is_dead_f);
 		usleep(100);
 	}
 }

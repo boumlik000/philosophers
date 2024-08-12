@@ -1,0 +1,165 @@
+0 philo 1 has taken a fork
+0 philo 3 has taken a fork
+0 philo 3 has taken a fork
+0 philo 3 is eating
+0 philo 5 has taken a fork
+1 philo 5 has taken a fork
+1 philo 5 is eating
+200 philo 3 is sleeping
+200 philo 4 has taken a fork
+201 philo 5 is sleeping
+201 philo 4 has taken a fork
+201 philo 4 is eating
+201 philo 1 has taken a fork
+201 philo 1 is eating
+400 philo 3 is thinking
+401 philo 5 is thinking
+401 philo 1 is sleeping
+401 philo 2 has taken a fork
+401 philo 2 has taken a fork
+401 philo 2 is eating
+401 philo 5 has taken a fork
+401 philo 5 has taken a fork
+401 philo 5 is eating
+401 philo 3 has taken a fork
+401 philo 4 is sleeping
+601 philo 2 is sleeping
+601 philo 3 has taken a fork
+601 philo 3 is eating
+601 philo 4 is thinking
+601 philo 1 is thinking
+601 philo 1 has taken a fork
+601 philo 1 has taken a fork
+601 philo 1 is eating
+602 philo 5 is sleeping
+801 philo 2 is thinking
+801 philo 3 is sleeping
+801 philo 4 has taken a fork
+801 philo 4 has taken a fork
+801 philo 4 is eating
+802 philo 1 is sleeping
+802 philo 5 is thinking
+803 philo 5 has taken a fork
+803 philo 2 has taken a fork
+803 philo 2 has taken a fork
+803 philo 2 is eating
+1001 philo 3 is thinking
+1002 philo 1 is thinking
+1002 philo 4 is sleeping
+1002 philo 3 has taken a fork
+1002 philo 5 has taken a fork
+1002 philo 5 is eating
+1003 philo 2 is sleeping
+1003 philo 1 has taken a fork
+1003 philo 3 has taken a fork
+1003 philo 3 is eating
+1202 philo 5 is sleeping
+1202 philo 1 has taken a fork
+1202 philo 1 is eating
+1202 philo 4 is thinking
+1203 philo 3 is sleeping
+1203 philo 4 has taken a fork
+1203 philo 4 has taken a fork
+1203 philo 4 is eating
+1203 philo 2 is thinking
+1402 philo 1 is sleeping
+1402 philo 2 has taken a fork
+1403 philo 2 has taken a fork
+1403 philo 2 is eating
+1403 philo 4 is sleeping
+1404 philo 3 is thinking
+1404 philo 3 has taken a fork
+1404 philo 5 is thinking
+1404 philo 5 has taken a fork
+1404 philo 5 has taken a fork
+1404 philo 5 is eating
+1602 philo 1 is thinking
+1603 philo 2 is sleeping
+1603 philo 1 has taken a fork
+1603 philo 3 has taken a fork
+1603 philo 3 is eating
+1604 philo 5 is sleeping
+1604 philo 1 has taken a fork
+1604 philo 1 is eating
+1604 philo 4 is thinking
+1803 philo 3 is sleeping
+1803 philo 4 has taken a fork
+1803 philo 4 has taken a fork
+1803 philo 4 is eating
+1803 philo 2 is thinking
+1804 philo 1 is sleeping
+1804 philo 2 has taken a fork
+1804 philo 2 has taken a fork
+1804 philo 2 is eating
+1804 philo 5 is thinking
+1804 philo 5 has taken a fork
+2003 philo 3 is thinking
+2003 philo 3 has taken a fork
+2004 philo 3 has taken a fork
+2004 philo 3 is eating
+2004 philo 1 is thinking
+2004 philo 1 has taken a fork
+2004 philo 4 is sleeping
+2004 philo 5 has taken a fork
+2004 philo 5 is eating
+2005 philo 2 is sleeping
+2204 philo 3 is sleeping
+2204 philo 4 is thinking
+2204 philo 4 has taken a fork
+2205 philo 2 is thinking
+2205 philo 5 is sleeping
+2205 philo 1 has taken a fork
+2205 philo 1 is eating
+2205 philo 4 has taken a fork
+2205 philo 4 is eating
+2404 philo 3 is thinking
+2405 philo 1 is sleeping
+2405 philo 5 is thinking
+2405 philo 5 has taken a fork
+2405 philo 2 has taken a fork
+2406 philo 2 has taken a fork
+2406 philo 2 is eating
+2406 philo 4 is sleeping
+2406 philo 3 has taken a fork
+2406 philo 5 has taken a fork
+2406 philo 5 is eating
+2605 philo 1 is thinking
+2606 philo 5 is sleeping
+2606 philo 2 is sleeping
+2606 philo 3 has taken a fork
+2606 philo 3 is eating
+2606 philo 4 is thinking
+2606 philo 1 has taken a fork
+2606 philo 1 has taken a fork
+2606 philo 1 is eating
+2806 philo 3 is sleeping
+2806 philo 4 has taken a fork
+2809 philo 4 has taken a fork
+2809 philo 4 is eating
+2809 philo 2 is thinking
+2809 philo 2 has taken a fork
+2809 philo 2 has taken a fork
+2809 philo 2 is eating
+2809 philo 1 is sleeping
+2809 philo 5 is thinking
+2809 philo 5 has taken a fork
+3006 philo 3 is thinking
+3009 philo 2 is sleeping
+3009 philo 3 has taken a fork
+3009 philo 3 has taken a fork
+3009 philo 3 is eating
+3009 philo 5 has taken a fork
+3009 philo 5 is eating
+3009 philo 1 is thinking
+3009 philo 1 has taken a fork
+3009 philo 4 is sleeping
+3209 philo 2 is thinking
+3209 philo 4 is thinking
+3209 philo 4 has taken a fork
+3210 philo 4 has taken a fork
+3210 philo 4 is eating
+3210 philo 1 has taken a fork
+3210 philo 1 is eating
+3410 philo 2 has taken a fork
+3410 philo 2 has taken a fork
+3410 philo 2 is eating
