@@ -6,7 +6,7 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 19:21:17 by mboumlik          #+#    #+#             */
-/*   Updated: 2024/08/12 10:40:58 by mboumlik         ###   ########.fr       */
+/*   Updated: 2024/08/12 19:02:39 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(char *str)
 {
-	int(i), (j), (sign);
+	int (i), (j), (sign);
 	i = 0;
 	j = 0;
 	sign = 1;
